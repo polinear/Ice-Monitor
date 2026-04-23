@@ -1,4 +1,6 @@
-﻿# Ice Monitor
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9fc81e5f-447e-4e70-a9f7-20c0b7156778" />
+
+ # Ice Monitor
 Видео-конвейер для двух камер с онлайн-сегментацией льда, записью результатов в TimescaleDB, batch-слоем в HDFS/Hive и BI-аналитикой в Superset.
 
 ## Что умеет проект
