@@ -1,0 +1,28 @@
+# Данные
+data/*.mp4
+data/*.avi
+data/*.mkv
+
+# Веса моделей
+inference/weights/*.pt
+inference/weights/*.onnx
+!inference/weights/README.md
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/*.png
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Docker
+.docker/

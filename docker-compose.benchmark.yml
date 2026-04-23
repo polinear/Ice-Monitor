@@ -1,0 +1,44 @@
+x-hotpath-worker-env: &hotpath-worker-env
+  REDIS_HOST: broker
+  KAFKA_BOOTSTRAP: kafka:9092
+  INFER_SIZE: "64"
+  CONF_THRESH: "0.05"
+  HOLD_LAST_RESULT_SEC: "180"
+  SKIP_MODEL_INFERENCE: "1"
+  ENABLE_FALLBACK_MODEL: "0"
+  RETINA_MASKS: "0"
+  MAX_DET: "4"
+  CV_THREADS: "1"
+  TORCH_NUM_THREADS: "2"
+  TORCH_INTEROP_THREADS: "1"
+  OMP_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  NUMEXPR_NUM_THREADS: "1"
+
+services:
+  worker_bench_1:
+    build: ./inference
+    container_name: worker_bench_1
+    environment:
+      CAM_ID: "bench_cam_1"
+      MODEL_PATH: "/weights/cam_a.pt"
+      <<: *hotpath-worker-env
+    volumes:
+      - ./inference/weights:/weights
+    depends_on: [broker, kafka]
+    networks: [ice_net]
+    restart: on-failure
+
+  worker_bench_2:
+    build: ./inference
+    container_name: worker_bench_2
+    environment:
+      CAM_ID: "bench_cam_2"
+      MODEL_PATH: "/weights/cam_a.pt"
+      <<: *hotpath-worker-env
+    volumes:
+      - ./inference/weights:/weights
+    depends_on: [broker, kafka]
+    networks: [ice_net]
+    restart: on-failure

@@ -1,0 +1,3 @@
+camera_count,published_measured,processed_measured,drop_rate,end_to_end_median_ms,end_to_end_p95_ms,delivery_median_ms,delivery_p95_ms,inference_median_ms,inference_p95_ms,throughput_fps
+1,5,5,0.0,78.24,91.4712,96.67301177978516,1870.3805923461912,1.627,1.9526,0.8333333333333334
+2,12,9,0.25,75.822,100.054,1063.6541843414307,2684.022521972656,1.632,4.018199999999999,1.5
