@@ -1,4 +1,5 @@
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9fc81e5f-447e-4e70-a9f7-20c0b7156778" />
+<img width="800" height="450" alt="ezgif-22d6e2b6826334be" src="https://github.com/user-attachments/assets/094ffbb2-84c1-4e27-8c97-553f9e20d808" />
+
 
  # Ice Monitor
 Видео-конвейер для двух камер с онлайн-сегментацией льда, записью результатов в TimescaleDB, batch-слоем в HDFS/Hive и BI-аналитикой в Superset.
